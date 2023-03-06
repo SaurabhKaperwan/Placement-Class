@@ -1,6 +1,8 @@
 // Divide input stream in half and first half is maxHeap and second half is minHeap
 //If n is odd then median is maxHeap.top()
 //If n is even then median is (maxHeap.top()+minHeap.top())/2.0
+
+//TC : O(N log N)
 class MedianFinder 
 {
     public:
