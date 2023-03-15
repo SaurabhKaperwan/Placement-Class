@@ -6,13 +6,13 @@ class TreeAncestor
 
         TreeAncestor(int n, vector<int>& parent) 
         {
-            dp.resize(20, vector<int>(parent.size(), -1));
+            dp.resize(16, vector<int>(parent.size(), -1));
 
             //for first ancestor
             for(int i = 0; i < parent.size(); i++)
                 dp[0][i] = parent[i];
 
-            for(int i = 1; i < 20; i++)
+            for(int i = 1; i < 16; i++)
             {
                 for(int j = 0; j < parent.size(); j++)
                 {
@@ -26,7 +26,7 @@ class TreeAncestor
     
         int getKthAncestor(int node, int k) 
         {
-            for(int i = 0; i < 20; i++)
+            for(int i = 0; i < 16; i++)
             {
                 if(k & (1 << i))
                 {
